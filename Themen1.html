@@ -1,0 +1,272 @@
+
+
+
+    <html>
+    
+<title>Lia Kirsch</title>
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+.mySlides {display:none;}
+.button {
+        float: left;
+        border: none;
+        background-color:none;
+        color: black;
+        padding: 15x 32px;
+        text-align: center;
+        display: inline-block;
+        margin: 4px 2px  ;
+        cursor: pointer;
+        
+        
+        
+    }
+    .button1{background-color:whitesmoke;}
+    .button2{background-color:  rgb(119,136,153);}
+    body{background-image:"Bildgerade.jpg" ;
+        background-color:whitesmoke;}
+    
+    
+        p.test {
+            
+        margin-top: 3em;
+        
+    }
+    
+    .hbtn {
+          position: relative;
+          box-sizing: border-box;
+          display: inline-block;
+          overflow: hidden;
+          padding: 8px 20px;
+          margin: 0px 3px 6px;
+          text-align: center;
+          border: 2px solid rgb(255, 255, 255);
+          text-decoration: none;
+          color: rgb(119,136,153);
+          white-space: nowrap;
+          z-index: 0;
+    } 
+     
+    
+    .hbtn i {
+          padding-right: 8px;
+    } 
+     
+    
+    .hb-fill-on::before {
+          position: absolute;
+          content: "";
+          background: rgb(255, 255, 255);
+          transition-duration: 0.3s;
+          z-index: -1;
+          top: 0px;
+          right: auto;
+          bottom: auto;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+    } 
+     
+     
+    
+    .hb-fill-on:hover::before {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+    } 
+    
+    
+    .hb-fill-on:hover {
+          color: rgb(0, 0, 0);
+          background: rgb(255, 255, 255);
+          transition: color 0.3s ease 0s, background 0s ease 0.3s;
+    } 
+    
+    .hbtno {
+          position: relative;
+          box-sizing: border-box;
+          display: inline-block;
+          overflow: hidden;
+          padding: 8px 20px;
+          margin: 0px 3px 6px;
+          text-align: center;
+          border: 2px solid rgb(255, 255, 255);
+          text-decoration: none;
+          color: rgb(255, 255, 255);
+          white-space: nowrap;
+          z-index: 0;
+    } 
+     
+    
+    .hbtno i {
+          padding-right: 8px;
+    } 
+     
+    
+    .hb-fill-ono::before {
+          position: absolute;
+          content: "";
+          background: rgb(255, 255, 255);
+          transition-duration: 0.3s;
+          z-index: -1;
+          top: 0px;
+          right: auto;
+          bottom: auto;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+    } 
+     
+     
+    
+    .hb-fill-ono:hover::before {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+    } 
+    
+    
+    .hb-fill-ono:hover {
+          color: rgb(0, 0, 0);
+          background: rgb(255, 255, 255);
+          transition: color 0.3s ease 0s, background 0s ease 0.3s;
+    } 
+     
+    .typA {margin: 1cm  ;}
+    .typB {margin: 4cm  ;}
+    body { margin-left: 1cm; padding: 0; margin-right: 1cm;}  
+
+    #bereich {
+    
+ float:auto;
+     top: 100px; bottom: 0;
+     background-color: whitesmoke;
+     width: 72%;
+     margin-left: 14%;
+     border: 3px grey solid;
+     padding: 30px;
+  
+}
+</style>
+
+    
+    <h2 style="color: whitesmoke;">.</h2>
+    
+ 
+    
+    <p class="test" > 
+       
+    <button class="button button1 " onclick="Startseite()" style="float: right">  <a href="Startseite.html" class="hbtn hb-fill-on">Startseite</a></a></button>
+    <button class="button button1 " onclick="Impressum()" style="float: right">  <a href="Impressum.html" class="hbtn hb-fill-on">Impressum</a></a></button>
+   
+    <button class="button button1 "  onclick="Termine()" style="float: right"> <a href="Termine.html" class="hbtn hb-fill-on">Termine</a></a></button>
+    <button class="button button1 " onclick="Themen() "style="float: right"> <a href="Themen.html" class="hbtn hb-fill-on">Themen</a></a></button>
+
+  
+    <p id= "SPDM"></p>
+    <button class="button  " onclick="SPDM" style="float: center"> <a target="_blank" href="https://www.spd-muenster.de/""><img src="SPDMunster.jpg" alt="Bild" width="auto" height="auto" /></a> </button>
+<h1 class="typA"><font face="Verdana">Lia Kirsch</font></h1>
+
+    <h3 class="typA" ><font face="Verdana">Ratskandidatin für Münster Hiltrup-Mitte</font></h3>
+    
+</head>
+<body>
+
+
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="Bildgerade.jpg" style="width:100%">
+  <img class="mySlides" src="Bildschraeg.jpg" style="width:100%">
+  
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+function Themen(){
+        document.getElementById("Themen").innerHTML ="";
+    }
+    function SPDM(){
+        document.getElementById("SPDM").innerHTML ="";
+    }
+    function Termine(){
+        document.getElementById("Termine").innerHTML ="";
+    }
+    function Kontakt(){
+        document.getElementById("Kontakt").innerHTML ="";
+    }
+    function Impressum(){
+        document.getElementById("Impressum").innerHTML ="";
+    }
+    function Datenschutz(){
+        document.getElementById("Datenschutz").innerHTML ="";
+    }
+    function Facebook(){
+        document.getElementById("Facebook").innerHTML ="";
+    }
+    function Instagram(){
+        document.getElementById("Instagram").innerHTML ="";
+    }
+    function Startseite(){
+        document.getElementById("Startseite").innerHTML ="";
+    }
+     var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+</script>
+
+<div id="bereich">
+<h1 ><font face="Verdana">Über mich</font></h1>
+<h4><font face="Verdana">Mein Name ist Lia Kirsch. Ich bin 23 Jahre alt und Geoinformatikerin. Mit 16 Jahren bin ich in meiner Geburtsstadt Königswinter in die SPD eingetreten. Durch mein Bachelorstudium ist Münster mein Zuhause geworden. Daher setze ich auch mein Masterstudium in Münster fort.
+Als junge politische Frau füllt mein Engagement für die SPD und die Jusos einen großen Teil meiner Freizeit aus. Neben der Politik bin ich aber auch gerne auf Flohmärkten und auf den Radwegen in und um Münster unterwegs.</font></h4>
+<h4><font face="Verdana">Schon früh habe ich mich für die Interessen junger Menschen eingesetzt. Neben meiner Vorstandsarbeit bei der SPD und den Jusos vor Ort, habe ich mich in viele jugendpolitische Debatten eingebracht und erfolgreich für eine neue Gesamtschule gestritten. Seit Mitte 2019 bin ich sachkundige Bürgerin im Planungsausschuss der Stadt Münster. Ich arbeite zu den Themen Stadtplanung und Stadtentwicklung, kommunale Verkehrs-, Wohnungs-, und Umweltpolitik.  Darüber hinaus bin ich Gewerkschaftsmitglied bei der Verdi, Mitglied beim BUND und dem Chaos Computer Club.
+</font></h4>
+</div>
+
+
+<footer style="background-color:  rgb(119,136,153);">
+    <p style="color: rgb(119,136,153);">.</p>
+    <p style="color: rgb(119,136,153);">.</p>
+    <button class="button button2 " onclick="Datenschutz()" style="float: right"> <a href="Datenschutz.html"><a href="Impressum.html" class="hbtno hb-fill-ono">Datenschutz</a></a></button>
+        <p id= "Datenschutz"></p>
+    <button class="button button2 " onclick="Facebook()" style="float: right">   <a target="_blank" href="https://www.facebook.com/lia.kirsch.7""><img src="fb.jpg" alt="Bild" width="30" height="auto" /></a> </button>
+    <p id= "Facebook"></p>
+    <button class="button button2 " onclick="Instagram()" style="float: right"> <a target="_blank" href="https://www.instagram.com/lia_kirsch/""><img src="instagram.jpg" alt="Bild" width="30" height="auto" /></a> </button>
+    <p id= "Instagram"></p>
+    <img src="in-die-neue-zeit.jpg" alt="Bild" width="200" height="auto" />
+    <p style="color: rgb(119,136,153);">.</p>
+    <p style="color:  rgb(119,136,153);">.</p>
+    <p style="color:  rgb(119,136,153);">.</p>
+</footer>
+</body>

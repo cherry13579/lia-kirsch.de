@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+    <head style="background-color: whitesmoke;">
+
+<title>Lia Kirsch</title>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href=""http://www.w3.org/2000/svg"">
+
+
+<h2 style="color: whitesmoke;">.</h2>
+    
+ 
+    
+    <p class="test" > 
+
+         <button class="button button1 " onclick="Impressum()" style="float: right">  <a href="Impressum.html" class="hbtn hb-fill-on">Impressum</a></a></button>  
+             <button class="button button1 " onclick="Themen() "style="float: right"> <a href="Themen.html" class="hbtn hb-fill-on">Themen</a></a></button>
+    <button class="button button1 " onclick="Startseite()" style="float: right" width="50%">  <a href="Startseite.html" class="hbtn hb-fill-on">Startseite</a></a></button>
+
+    <button class="button button1 "  onclick="Termine()" style="float: right"> <a href="Termine.html" class="hbtn hb-fill-on">Termine</a></a></button>
+
+
+ <p id= "SPDM"></p>
+    <button class="button  " onclick="SPDM" style="float: center"> <a target="_blank" href="https://www.spd-muenster.de/""><img src="SPDMunster.jpg" alt="Bild" width="auto" height="auto" /></a> </button>
+<h1 class="typA"><font face="Verdana">Lia Kirsch</font></h1>
+
+    <h3 class="typA" ><font face="Verdana">Ratskandidatin für Münster Hiltrup-Mitte</font></h3>
+    
+</head>
+
+<style>
+	body { margin-left: 1cm; padding: 0; margin-right: 1cm;}
+  #map { position: center; top: 0; bottom: 0; width: 50%; margin-left: 11em; margin-right: 11em; border: 3px grey solid;}
+
+     
+
+       #bereich {
+          float:auto;
+     top: 100px; bottom: 0;
+     background-color: whitesmoke;
+     width: 72%;
+     margin-left: 14%;
+     border: 3px grey solid;
+     padding: 30px;
+
+    
+
+
+</style>
+</head>
+<body>
+<style>
+
+.mapboxgl-popup {
+max-width: 400px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+.mySlides {display:none;}
+.button {
+        float: left;
+        border: none;
+        background-color:none;
+        color: black;
+        padding: 15x 32px;
+        text-align: center;
+        display: inline-block;
+        margin: 4px 2px  ;
+        cursor: pointer;
+        
+        
+        
+    }
+    .button1{background-color:whitesmoke;}
+    .button2{background-color:  rgb(119,136,153);}
+    body{background-image:"Bildgerade.jpg" ;
+        background-color:whitesmoke;}
+    
+    
+        p.test {
+            
+        margin-top: 3em;
+        
+    }
+    
+    .hbtn {
+          position: relative;
+          box-sizing: border-box;
+          display: inline-block;
+          overflow: hidden;
+          padding: 8px 20px;
+          margin: 0px 3px 6px;
+          text-align: center;
+          border: 2px solid rgb(255, 255, 255);
+          text-decoration: none;
+          color: rgb(119,136,153);
+          white-space: nowrap;
+          z-index: 0;
+    } 
+     
+    
+    .hbtn i {
+          padding-right: 8px;
+    } 
+     
+    
+    .hb-fill-on::before {
+          position: absolute;
+          content: "";
+          background: rgb(255, 255, 255);
+          transition-duration: 0.3s;
+          z-index: -1;
+          top: 0px;
+          right: auto;
+          bottom: auto;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+    } 
+     
+     
+    
+    .hb-fill-on:hover::before {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+    } 
+    
+    
+    .hb-fill-on:hover {
+          color: rgb(0, 0, 0);
+          background: rgb(255, 255, 255);
+          transition: color 0.3s ease 0s, background 0s ease 0.3s;
+    } 
+    
+    .hbtno {
+          position: relative;
+          box-sizing: border-box;
+          display: inline-block;
+          overflow: hidden;
+          padding: 8px 20px;
+          margin: 0px 3px 6px;
+          text-align: center;
+          border: 2px solid rgb(255, 255, 255);
+          text-decoration: none;
+          color: rgb(255, 255, 255);
+          white-space: nowrap;
+          z-index: 0;
+    } 
+     
+    
+    .hbtno i {
+          padding-right: 8px;
+    } 
+     
+    
+    .hb-fill-ono::before {
+          position: absolute;
+          content: "";
+          background: rgb(255, 255, 255);
+          transition-duration: 0.3s;
+          z-index: -1;
+          top: 0px;
+          right: auto;
+          bottom: auto;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+    } 
+     
+     
+    
+    .hb-fill-ono:hover::before {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+    } 
+    
+    
+    .hb-fill-ono:hover {
+          color: rgb(0, 0, 0);
+          background: rgb(255, 255, 255);
+          transition: color 0.3s ease 0s, background 0s ease 0.3s;
+    } 
+     
+    .typA {margin: 1cm  ;}
+    .typB {margin: 4cm  ;}
+      body { margin-left: 1cm; padding: 0; margin-right: 1cm;}  
+      bereich{ margin-left: 1cm; padding: 0; margin-right: 1cm;}  
+</style>
+
+
+
+
+<h1 style="color: whitesmoke;" class="typA">.....<font face="Verdana">Meine Wahlkampftermine</font></h1>
+
+
+<div id="bereich">
+<h1 ><font face="Verdana">Meine Themen</font></h1>
+<h4><font face="Verdana">Hiltrup ist attraktiv, aber da geht noch deutlich mehr! Ich möchte, dass der größte Außenstadtteil ein neues Konzept für die Stadthalle bekommt. Wir brauchen einen Ort, an dem sich alle Menschen treffen können, an dem man zu Konzerten und Veranstaltungen gehen kann. Kultur kann nicht nur in der Münsteraner Innenstadt stattfinden! Alle müssen von Kultur profitieren. Dazu gehört auch ein Kulturticket für junge Menschen, denn Theater, Kino und Musik dürfen nicht an einem kleinen Geldbeutel scheitern. </font></h4>
+<h4><font face="Verdana">Ich setze mich dafür ein, die Verkehrslage in Hiltrup zu verbessern. Zu einem attraktiven Stadtteil gehört, dass wir endlcih ein nues Konzept für die Steigerung der Attraktivität der Marktallee entwickeln.</h4>
+<h4><font face="Verdana">Außerdem brauchen wir eine bessere Anbindung an die Münsteraner Innenstadt. Busse wie die Linie 18 müssen im 20-Minuten-Takt fahren. Zusätzlich brauchen wir Metrobusse in die Münsteraner Innenstadt, die höchstens vier Stopps auf der Strecke haben. Eigene Busspuren sollen verhindern, dass Busse im Stau stecken bleiben. Eine 15-Minuten-Taktung von Zügen zwischen dem Bahnhof Hiltrup und dem Hauptbahnhof Münster ist zusätzlich nötig.</font></h4>
+<h4>Münster darf sich nicht auf dem Ruf einer Fahrradhauptstadt ausruhen und muss in das Radnetz investieren. Ich fordere den Ausbau der Radwege an beiden Seiten des Kanals. 
+</font></h4>
+<h2> Klicken Sie einfach auf einen der Schraubschlüssel in der Karte und erfahren Sie mehr zum jeweiligen Projekt!</h2>
+</div>
+
+
+
+<div id="map"style='width: auto; height: 600px; float: auto;'></div>
+
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiY2hlcnJ5MTM1OSIsImEiOiJjam81a2I5OTIwOHh4M2tuenBxN2t2cXlkIn0.Uf4iUj86iXaR019zoafJrg';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [7.644563, 51.904650],
+zoom: 13.1
+});
+
+// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+
+// Add geolocate control to the map.
+map.addControl(
+new mapboxgl.GeolocateControl({
+positionOptions: {
+enableHighAccuracy: true
+},
+trackUserLocation: true
+})
+);
+ 
+map.on('load', function() {
+map.addSource('places', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Ausbau der Radwege am Kanal und zwar auf beiden Seiten!</strong><p><a</a> Der Kanal muss an beiden Seiten gut mit dem Fahrrad befahrbar sein. Das bedeutet, dass wir ihn an beiden Seiten mit guten Wegen und besonders auch mit intelligenter Beleuchtung ausbauen müssen.</p>',
+'icon': 'hardware'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [ 7.655622, 51.907340,]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Ausbau der Radwege am Kanal und zwar auf beiden Seiten!</strong><p><a</a> Der Kanal muss an beiden Seiten gut mit dem Fahrrad befahrbar sein. Das bedeutet, dass wir ihn an beiden Seiten mit guten Wegen und besonders auch mit intelligenter Beleuchtung ausbauen müssen.</p>',
+'icon': 'hardware'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [7.652307, 51.909908]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Die Stadthalle braucht ein neues Konzept!</strong><p> </a>Hiltrup ist attraktiv, aber da geht noch deutlich mehr! Ich möchte, dass der größte Außenstadtteil ein neues Konzept für die Stadthalle bekommt. Wir brauchen einen Ort, an dem sich alle Menschen treffen können, an dem man zu Konzerten und Veranstaltungen gehen kann. Kultur kann nicht nur in der Münsteraner Innenstadt stattfinden! </p>',
+'icon': 'hardware'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [ 7.639355, 51.901337]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Bessere Anbindung an die Münsteraner Innenstadt!</strong><p>Dafür, dass Hiltrup mit 25.000 Einwohnerinnen und Einwohnern der größte Stadtteil Münster ist, fehlt eine wirklich gute Anbindung an die Münsteraner Innenstadt. Natürlich kommen die Menschen aus Hiltrup nach Münster, doch es kann deutlich schneller und effizienter gehen. Ich fordere Metrobusse, die zwischen Hiltrup und Münster Innenstadt höchstens 4 Stopps machen, eigenständige Busspuren, um Stau zu vermeiden und Züge im 15-Minuten-Takt zwischen Hiltrup Bahnhof und Münster Hauptbahnhof</p>',
+'icon': 'hardware'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [  7.654138, 51.904370,]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Attraktive Marktallee!</strong><p>Ich möchte, dass Anwohner*innen, Kaufleute und die Stadtteilinitiative in einem Vertreter*innenforum zusammenkommen und über die Gestaltung der Marktallee entscheiden. Wie viel Fläche soll für Fußgänger*innen, Fahrräder, Gastronomie und Autos sein? Wie erhalten wir die Vielfalt, wenn Leerstand in den Geschäften entsteht? Was sind Ihre Ideen für die Marktallee?</p>',
+'icon': 'hardware'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [7.641663, 51.903778 ]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Capital Pride Parade</strong><p>The annual <a href="http://www.capitalpride.org/parade" target="_blank" title="Opens in a new window">Capital Pride Parade</a> makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>',
+'icon': 'hartware'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.043444, 38.909664]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Muhsinah</strong><p>Jazz-influenced hip hop artist <a href="http://www.muhsinah.com" target="_blank" title="Opens in a new window">Muhsinah</a> plays the <a href="http://www.blackcatdc.com">Black Cat</a> (1811 14th Street NW) tonight with <a href="http://www.exitclov.com" target="_blank" title="Opens in a new window">Exit Clov</a> and <a href="http://godsilla.bandcamp.com" target="_blank" title="Opens in a new window">Gods’illa</a>. 9:00 p.m. $12.</p>',
+'icon': 'hartware'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.031706, 38.914581]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>A Little Night Music</strong><p>The Arlington Players\' production of Stephen Sondheim\'s  <a href="http://www.thearlingtonplayers.org/drupal-6.20/node/4661/show" target="_blank" title="Opens in a new window"><em>A Little Night Music</em></a> comes to the Kogod Cradle at The Mead Center for American Theater (1101 6th Street SW) this weekend and next. 8:00 p.m.</p>',
+'icon': 'hartware'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.020945, 38.878241]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Truckeroo</strong><p><a href="http://www.truckeroodc.com/www/" target="_blank">Truckeroo</a> brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>',
+'icon': 'hartware'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-77.007481, 38.876516]
+}
+}
+]
+}
+});
+// Add a layer showing the places.
+map.addLayer({
+'id': 'places',
+'type': 'symbol',
+'source': 'places',
+'layout': {
+'icon-image': '{icon}-15',
+'icon-allow-overlap': true
+}
+});
+ 
+// When a click event occurs on a feature in the places layer, open a popup at the
+// location of the feature, with description HTML from its properties.
+map.on('click', 'places', function(e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+new mapboxgl.Popup()
+.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'places', function() {
+map.getCanvas().style.cursor = 'pointer';
+});
+ 
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+});
+});
+
+
+</script>
+
+
+
+
+
+
+<footer style="background-color:  rgb(119,136,153);">
+    <p style="color: rgb(119,136,153);">.</p>
+    <p style="color: rgb(119,136,153);">.</p>
+    <button class="button button2 " onclick="Datenschutz()" style="float: right"> <a href="Datenschutz.html"><a href="Impressum.html" class="hbtno hb-fill-ono">Datenschutz</a></a></button>
+        <p id= "Datenschutz"></p>
+    <button class="button button2 " onclick="Facebook()" style="float: right">   <a target="_blank" href="https://www.facebook.com/Lia-Kirsch-110009677363813?view_public_for=110009677363813""><img src="fb.jpg" alt="Bild" width="30" height="auto" /></a> </button>
+    <p id= "Facebook"></p>
+    <button class="button button2 " onclick="Instagram()" style="float: right"> <a target="_blank" href="https://www.instagram.com/lia_kirsch/""><img src="instagram.jpg" alt="Bild" width="30" height="auto" /></a> </button>
+    <p id= "Instagram"></p>
+    <img src="in-die-neue-zeit.jpg" alt="Bild" width="200" height="auto" />
+    <p style="color: rgb(119,136,153);">.</p>
+    <p style="color:  rgb(119,136,153);">.</p>
+    <p style="color:  rgb(119,136,153);">.</p>
+</footer>
+
+
+
+</body>
+</html>

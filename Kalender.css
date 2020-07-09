@@ -1,0 +1,42 @@
+.calendar_link {
+	font-family: Arial;
+	font-size: 40px;
+	text-align: right;
+	color: #000000;
+	text-decoration: none;
+	text-underline: none;
+}
+
+.calendar_head {
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	width: 25px;
+}
+
+.calendar_head_month {
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	width: 25px;
+	background-color:red;
+	color: whitesmoke;
+}
+
+.calendar_day {
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	width: 25px;
+	color: #000000;
+	background-color: whitesmoke;
+}
+
+.calendar_entry {
+	font-family: Arial;
+	font-size: 12px;
+	text-align: center;
+}
