@@ -1,446 +1,118 @@
-<html>
-    <head style="background-color: whitesmoke;">
-   
-    <script type="text/javascript" src="Kalender.js"></script>
-		<link rel="stylesheet" type="text/css" href="Kalender.css" />
-        <h2 style="color: whitesmoke;">.</h2>
-        <link href="calendar.css" rel="calendar.css">
-  
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
-<h2 style="color: whitesmoke;">.</h2>
-    
- 
-    
-    <p class="test" > 
-
-         <button class="button button1 " onclick="Impressum()" style="float: right">  <a href="Impressum.html" class="hbtn hb-fill-on">Impressum</a></a></button>  
-             <button class="button button1 " onclick="Themen() "style="float: right"> <a href="Themen.html" class="hbtn hb-fill-on">Themen</a></a></button>
-    <button class="button button1 " onclick="Startseite()" style="float: right" width="50%">  <a href="index.html" class="hbtn hb-fill-on">Startseite</a></a></button>
-
-    <button class="button button1 "  onclick="Termine()" style="float: right"> <a href="Termine.html" class="hbtn hb-fill-on">Termine</a></a></button>
-
-
- <p id= "SPDM"></p>
-    <button class="button  " onclick="SPDM" style="float: center"> <a target="_blank" href="https://www.spd-muenster.de/""><img src="SPDMunster.jpg" alt="Bild" width="auto" height="auto" /></a> </button>
-<h1 class="typA"><font face="Verdana">Lia Kirsch</font></h1>
-
-    <h3 class="typA" ><font face="Verdana">Ratsfrau für Münster Hiltrup-Mitte</font></h3>
-  
-    </head>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lia Kirsch – Kalender</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #c8102e;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .container h1 {
+      color: #c8102e;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    #calendar {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .social-icons {
+      margin-bottom: 15px;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.4rem;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #c8102e;
+    }
+  </style>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'de',
+        buttonText: {
+          today: 'Heute'
+        },
+        events: [],
+        eventClick: function(info) {
+          alert(info.event.title + "\n" + info.event.extendedProps.description);
+        }
+      });
+      calendar.render();
+    });
+  </script>
+</head>
 <body>
-<p></p>
-<p></p>
-<p></p>
+  <nav>
+    <a href="Startseite.html">Startseite</a>
+    <a href="Themen.html">Themen</a>
+    <a href="Termine.html">Kalender</a>
+    <a href="Impressum.html">Impressum</a>
+    <a href="Datenschutz.html">Datenschutz</a>
+  </nav>
 
-<h1 style="color: whitesmoke;" class="typA">.....<font face="Verdana">Meine Wahlkampftermine</font></h1>
-<h1 class="typA"><font face="Verdana">Meine Wahlkampftermine</font></h1>
-<h4 class="typA"><font face="Verdana">Im Kalender finden Sie alle Termine, bei denen Sie mich im Wahlkampf treffen können. Sprechen Sie mich gerne an!</font></h4>
-<!-- Kalender -->
-<table style="margin-left:30em;" border=1 id='calendar'>
-		<tr style='visibility:collapse;' hidden>
-			<td colspan=7 id='date_memory'>---</td>
-		</tr>
-		<tr>
-			<td class='calendar_head'><a class='calendar_link'
-				href='javascript:prevMonth()'> &laquo;</a></td>
-			<td colspan=5 class='calendar_head_month' id='calendar_month'>
-				---</td>
-			<td class='calendar_head'><a class='calendar_link'
-				href='javascript:nextMonth()'> &raquo;</a></td>
-		</tr>
-		<tr>
-			<td class='calendar_day'>Mo</td>
-			<td class='calendar_day'>Di</td>
-			<td class='calendar_day'>Mi</td>
-			<td class='calendar_day'>Do</td>
-			<td class='calendar_day'>Fr</td>
-			<td class='calendar_day'>Sa</td>
-			<td class='calendar_day'>So</td>
-		</tr>
-		<tr>
-			<td class='calendar_entry' id='calendar_entry_1'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_2'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_3'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_4'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_5'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_6'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_7'>-x-</td>
-		</tr>
-		<tr>
-			<td class='calendar_entry' id='calendar_entry_8'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_9'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_10'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_11'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_12'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_13'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_14'>-x-</td>
-		</tr>
-		<tr>
-			<td class='calendar_entry' id='calendar_entry_15'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_16'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_17'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_18'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_19'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_20'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_21'>-x-</td>
-		</tr>
-		<tr>
-			<td class='calendar_entry' id='calendar_entry_22'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_23'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_24'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_25'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_26'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_27'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_28'>-x-</td>
-		</tr>
-		<tr>
-			<td class='calendar_entry' id='calendar_entry_29'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_30'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_31'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_32'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_33'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_34'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_35'>-x-</td>
-		</tr>
-		<tr>
-			<td class='calendar_entry' id='calendar_entry_36'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_37'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_38'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_39'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_40'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_41'>-x-</td>
-			<td class='calendar_entry' id='calendar_entry_42'>-x-</td>
-		</tr>
-	</table>
+  <div class="container">
+    <h1>Kalender</h1>
+    <div id="calendar"></div>
+  </div>
 
-    <script type='text/javascript'>
-		iniCalendar();
-		
-		/*0 = wie bisher, Datum wird in die Box geschrieben*/
-		setReturnModus(1);
-		/*1 = neu, Eventtext wird in die Box geschrieben
-		Das event muss in der calendar.js in der Function
-		getEventtext definiert werden.*/
-		//setReturnModus(1);
-	</script>
-    <br />
-	<br />
-	<form  style="margin-left:30em;" id='myform'>
-		<input id='datum' size=55/>
-	</form>
-       
-</script>
-</center>
-<br/><div style="clear:both"></div><div><a target="_blank" href="http://www.htmlbestcodes.com/"><span style="font-size: 8pt; text-decoration: none"></span></a></div>
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/lia.kirsch.7" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/lia_kirsch/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:lia.kirsch@stadt-muenster.de" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p><a href="Datenschutz.html" style="color: #fff; text-decoration: underline;">Datenschutz</a></p>
+    <p>&copy; 2025 Lia Kirsch</p>
+  </footer>
 </body>
-</html><a target='_blank' href='http://www.htmlbestcodes.com/' style='font-size: 8pt; text-decoration: none'></a>
-   
-<p id= "Themen"></p>
-        <p id= "Termine"></p>
-        <p id= "Kontakt"></p>
-        <p id= "Impressum"></p>
-</body>
-<footer style="background-color:  rgb(119,136,153);">
-    <p style="color: rgb(119,136,153);">.</p>
-    <p style="color: rgb(119,136,153);">.</p>
-    <button class="button button2 " onclick="Datenschutz()" style="float: right"> <a href="Datenschutz.html"><a href="Impressum.html" class="hbtno hb-fill-ono">Datenschutz</a></a></button>
-        <p id= "Datenschutz"></p>
-    <button class="button button2 " onclick="Facebook()" style="float: right">   <a target="_blank" href="https://www.facebook.com/Lia-Kirsch-110009677363813?view_public_for=110009677363813""><img src="fb.jpg" alt="Bild" width="30" height="auto" /></a> </button>
-    <p id= "Facebook"></p>
-    <button class="button button2 " onclick="Instagram()" style="float: right"> <a target="_blank" href="https://www.instagram.com/lia_kirsch/""><img src="instagram.jpg" alt="Bild" width="30" height="auto" /></a> </button>
-    <p id= "Instagram"></p>
-    <img src="in-die-neue-zeit.jpg" alt="Bild" width="200" height="auto" />
-    <p style="color: rgb(119,136,153);">.</p>
-    <p style="color:  rgb(119,136,153);">.</p>
-    <p style="color:  rgb(119,136,153);">.</p>
-</footer>
-</body>
-
-<script>
-function Themen(){
-    document.getElementById("Themen").innerHTML ="";
-}
-function Termine(){
-    document.getElementById("Termine").innerHTML =";
-}
-function Kontakt(){
-    document.getElementById("Kontakt").innerHTML ="";
-}
-function Impressum(){
-    document.getElementById("Impressum").innerHTML ="";
-}
-function Datenschutz(){
-    document.getElementById("Datenschutz").innerHTML ="";
-}
-function Facebook(){
-    document.getElementById("Facebook").innerHTML ="";
-}
-function Instagram(){
-    document.getElementById("Instagram").innerHTML ="";
-}
-function Startseite(){
-    document.getElementById("Startseite").innerHTML ="";
-}
-
-</script>
-<style>
-
-
-    .button {
-    float: left;
-    border: none;
-    background-color:none;
-    color: black;
-    padding: 15x 32px;
-    text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    
-    
-    
-}
-.button1{background-color:whitesmoke;}
-.button2{background-color:  rgb(119,136,153);}
-body{background-image:"Bildgerade.jpg" ;
-    background-color:whitesmoke;}
-
-
-    p.test {
-        
-	margin-top: 3em;
-    
-}
-
-.hbtn {
-      position: relative;
-      box-sizing: border-box;
-      display: inline-block;
-      overflow: hidden;
-      padding: 8px 20px;
-      margin: 0px 3px 6px;
-      text-align: center;
-      border: 2px solid rgb(255, 255, 255);
-      text-decoration: none;
-      color: rgb(119,136,153);
-      white-space: nowrap;
-      z-index: 0;
-} 
- 
-
-.hbtn i {
-      padding-right: 8px;
-} 
- 
-
-.hb-fill-on::before {
-      position: absolute;
-      content: "";
-      background: rgb(255, 255, 255);
-      transition-duration: 0.3s;
-      z-index: -1;
-      top: 0px;
-      right: auto;
-      bottom: auto;
-      left: 0px;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-} 
- 
- 
-
-.hb-fill-on:hover::before {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-} 
-
-
-.hb-fill-on:hover {
-      color: rgb(0, 0, 0);
-      background: rgb(255, 255, 255);
-      transition: color 0.3s ease 0s, background 0s ease 0.3s;
-} 
-
-.hbtno {
-      position: relative;
-      box-sizing: border-box;
-      display: inline-block;
-      overflow: hidden;
-      padding: 8px 20px;
-      margin: 0px 3px 6px;
-      text-align: center;
-      border: 2px solid rgb(255, 255, 255);
-      text-decoration: none;
-      color: rgb(255, 255, 255);
-      white-space: nowrap;
-      z-index: 0;
-} 
- 
-
-.hbtno i {
-      padding-right: 8px;
-} 
- 
-
-.hb-fill-ono::before {
-      position: absolute;
-      content: "";
-      background: rgb(255, 255, 255);
-      transition-duration: 0.3s;
-      z-index: -1;
-      top: 0px;
-      right: auto;
-      bottom: auto;
-      left: 0px;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-} 
- 
- 
-
-.hb-fill-ono:hover::before {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-} 
-
-
-.hb-fill-ono:hover {
-      color: rgb(0, 0, 0);
-      background: rgb(255, 255, 255);
-      transition: color 0.3s ease 0s, background 0s ease 0.3s;
-} 
- 
-.typA {margin: 1cm;}
-body { margin-left: 1cm; padding: 0; margin-right: 1cm;}
-
-body {
-	font-family: Tahoma;
-}
-
-header {
-	text-align: center;
-}
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-$salmon: #FB5965;
-$dkpink: #E21C71;
-$red: #E21C20;
-$redorg: #EF4100;
-$orange: #F76500;
-$orgylw: #F77900;
-$yellow: #FCEE6D;
-$green: #8ABE30;
-$aqua: #49E7D7;
-$teal: #24A69E;
-$sltbl: #288ED3;
-$pwdbl: #2E73FF;
-$blue: #1636E1;
-$purple: #953CFE;
-$dkprpl: #6100D6;
-$gray: #626972;
-$dkgray: #29323F;
-$lavender: #838ECF;
-@mixin hideOrShow($initVal, $finVal){
-  @-webkit-keyframes hideOrShow{
-    0% {
-      display: $initVal
-    }
-    100% {
-      display: $finVal;
-    }
-  }
-  @keyframes hideOrShow{
-    0% {
-      display: $initVal
-    }
-    100% {
-      display: $finVal;
-    }
-  }
-  &{
-    animation: hideOrShow 0.1s linear 2s forwards;
-  }
-}
-@mixin stagger-fadein($i, $timer, $max) {
-   @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  $i: 0;
-  $timer: 0.2;
-  @while $i < $max {
-    &:nth-child(#{$i}){
-      animation: fadeIn 0.1s linear #{$timer}s forwards;
-    }
-    $i: $i + 1;
-    $timer: $timer + 0.05;
-  }
-}
-@mixin raindrop($i, $timer) {
-  i: 1;
-  $timer: 2;
-  @keyframes rain {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes rain {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @while $i < 5 {
-    &#drop-#{$i}{
-      animation: rain 0.1s linear #{$timer}s forwards;
-    }
-    $i: $i + 1;
-    $timer: $timer + 0.05;
-  }
-}
-@keyframes flipUp {
-  0% {
-    transform: rotateX(-90deg);
-  }
-  100% {
-    transform: rotateX(0deg);
-  }
-}
-* {
-  box-sizing: border-box;
-  outline: 0;
-}
-html, body{
-  height: 100%;
-  margin: 0;
-}
-
-</style>
-</html>>
+</html>
