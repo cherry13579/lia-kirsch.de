@@ -1,275 +1,215 @@
-
-
-
-    <html>
-    
-<title>Lia Kirsch</title>
-<meta name="keywords" content="lia, kirsch,kommunalwahl,münster,kirschzeit2025">
-<meta name="description" content="Seite zur Kommunalwahl 2025 von Lia Kirsch."/>
-<meta name= "autor" content="Lia Kirsch">
-<meta name="robots" content="index, follow">
-
-<link rel="stylesheet" href="https://www.spd-muenster.de/">
-
-<style>
-.mySlides {display:none;}
-.button {
-        float: left;
-        border: none;
-        background-color:none;
-        color: black;
-        padding: 15x 32px;
-        text-align: center;
-        display: inline-block;
-        margin: 4px 2px  ;
-        cursor: pointer;
-        
-        
-        
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Lia Kirsch, Kommunalwahl, SPD, Münster, Kirschzeit2025">
+  <meta name="description" content="Seite zur Kommunalwahl 2025 von Lia Kirsch.">
+  <meta name="author" content="Lia Kirsch">
+  <title>Lia Kirsch</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
     }
-    .button1{background-color:whitesmoke;}
-    .button2{background-color:  rgb(119,136,153);}
-    body{background-image:"Bildgerade.jpg" ;
-        background-color:whitesmoke;}
-    
-    
-        p.test {
-            
-        margin-top: 3em;
-        
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
     }
-    
-    .hbtn {
-          position: relative;
-          box-sizing: border-box;
-          display: inline-block;
-          overflow: hidden;
-          padding: 8px 20px;
-          margin: 0px 3px 6px;
-          text-align: center;
-          border: 2px solid rgb(255, 255, 255);
-          text-decoration: none;
-          color: rgb(119,136,153);
-          white-space: nowrap;
-          z-index: 0;
-    } 
-     
-    
-    .hbtn i {
-          padding-right: 8px;
-    } 
-     
-    
-    .hb-fill-on::before {
-          position: absolute;
-          content: "";
-          background: rgb(255, 255, 255);
-          transition-duration: 0.3s;
-          z-index: -1;
-          top: 0px;
-          right: auto;
-          bottom: auto;
-          left: 0px;
-          width: 100%;
-          height: 100%;
-          opacity: 0;
-    } 
-     
-     
-    
-    .hb-fill-on:hover::before {
-          width: 100%;
-          height: 100%;
-          opacity: 1;
-    } 
-    
-    
-    .hb-fill-on:hover {
-          color: rgb(0, 0, 0);
-          background: rgb(255, 255, 255);
-          transition: color 0.3s ease 0s, background 0s ease 0.3s;
-    } 
-    
-    .hbtno {
-          position: relative;
-          box-sizing: border-box;
-          display: inline-block;
-          overflow: hidden;
-          padding: 8px 20px;
-          margin: 0px 3px 6px;
-          text-align: center;
-          border: 2px solid rgb(255, 255, 255);
-          text-decoration: none;
-          color: rgb(255, 255, 255);
-          white-space: nowrap;
-          z-index: 0;
-    } 
-     
-    
-    .hbtno i {
-          padding-right: 8px;
-    } 
-     
-    
-    .hb-fill-ono::before {
-          position: absolute;
-          content: "";
-          background: rgb(255, 255, 255);
-          transition-duration: 0.3s;
-          z-index: -1;
-          top: 0px;
-          right: auto;
-          bottom: auto;
-          left: 0px;
-          width: 100%;
-          height: 100%;
-          opacity: 0;
-    } 
-     
-     
-    
-    .hb-fill-ono:hover::before {
-          width: 100%;
-          height: 100%;
-          opacity: 1;
-    } 
-    
-    
-    .hb-fill-ono:hover {
-          color: rgb(0, 0, 0);
-          background: rgb(255, 255, 255);
-          transition: color 0.3s ease 0s, background 0s ease 0.3s;
-    } 
-     
-    .typA {margin: 1cm  ;}
-    .typB {margin: 4cm  ;}
-    body { margin-left: 1cm; padding: 0; margin-right: 1cm;}  
-
-    #bereich {
-    
- float:auto;
-     top: 100px; bottom: 0;
-     background-color: whitesmoke;
-     width: 72%;
-     margin-left: 14%;
-     border: 3px grey solid;
-     padding: 30px;
-  
-}
-</style>
-
-    
-    <h2 style="color: whitesmoke;">.</h2>
-    
- 
-    
-    <p class="test" > 
-           <button class="button button1 " onclick="Impressum()" style="float: right">  <a href="Impressum.html" class="hbtn hb-fill-on">Impressum</a></a></button>
-    <button class="button button1 " onclick="Startseite()" style="float: right">  <a href="index.html" class="hbtn hb-fill-on">Startseite</a></a></button>
-
-   
-    <button class="button button1 "  onclick="Termine()" style="float: right"> <a href="Termine.html" class="hbtn hb-fill-on">Termine</a></a></button>
-    <button class="button button1 " onclick="Themen() "style="float: right"> <a href="Themen.html" class="hbtn hb-fill-on">Themen</a></a></button>
-
-  
-    <p id= "SPDM"></p>
-    <button class="button  " onclick="SPDM" style="float: center"> <a target="_blank" href="https://www.spd-muenster.de/""><img src="SPDMunster.jpg" alt="Bild" width="auto" height="auto" /></a> </button>
-<h1 class="typA"><font face="Verdana">Lia Kirsch</font></h1>
-
-    <h3 class="typA" ><font face="Verdana">Fraktionsvorsitzende der SPD im Rat der Stadt Münster und Ratskandidatin für Münsters Innenstadt</font></h3>
-    
+    header.hero {
+      position: relative;
+      height: 90vh;
+      background: url('https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/DSC_0009.JPG') right 30% bottom / cover no-repeat;
+    }
+    .overlay {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1.5rem 2.5rem;
+      border-radius: 10px;
+      max-width: 90%;
+      text-align: left;
+    }
+    .overlay h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .overlay h3 {
+      margin-top: 10px;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    .overlay h4 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+    }
+    nav a {
+      margin: 10px 15px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #c8102e;
+    }
+    .transition-band {
+      height: 60px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #fff 100%);
+      margin-top: -60px;
+      position: relative;
+      z-index: 1;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 30px;
+      background-color: #fff;
+      color: #333;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+    }
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      gap: 1.2rem;
+    }
+    .intro h2 {
+      color: #c8102e;
+      font-size: 2rem;
+      align-self: center;
+    }
+    .intro p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 750px;
+    }
+    .intro ul {
+      list-style: disc;
+      text-align: center;
+      padding-left: 0;
+      margin: 0 auto;
+    }
+    .intro ul li {
+      text-align: left;
+      max-width: 750px;
+      margin: 0 auto 0.5rem;
+    }
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      align-self: center;
+    }
+    .slideshow {
+      width: 100%;
+      margin-top: 40px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .slideshow img {
+      width: 100%;
+      display: block;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .social-icons {
+      margin-bottom: 15px;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.4rem;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #c8102e;
+    }
+    @media (max-width: 768px) {
+      .overlay {
+        left: 5%;
+        right: 5%;
+        bottom: 3%;
+        padding: 1rem 1.5rem;
+      }
+      .overlay h1 {
+        font-size: 2rem;
+      }
+      .overlay h3 {
+        font-size: 1.2rem;
+      }
+      .overlay h4 {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Lia Kirsch</h1>
+      <h3>Für ein gerechtes, lebendiges Münster</h3>
+      <h4>Fraktionsvorsitzende im Rat der Stadt Münster<br>und Ratskandidatin für die Innenstadt</h4>
+    </div>
+  </header>
 
+  <div class="transition-band"></div>
 
+  <nav>
+    <a href="index.html">Startseite</a>
+    <a href="Themen.html">Themen</a>
+    <a href="Termine.html">Termine</a>
+    <a href="Impressum.html">Impressum</a>
+    <a href="Datenschutz.html">Datenschutz</a>
+  </nav>
 
+  <div class="container">
+    <div class="intro">
+      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/DSC_0009.JPG" alt="Lia Kirsch" class="profile-pic">
+      <h2>Über mich</h2>
+      <p>Ich bin Lia Kirsch, 28 Jahre alt, Geoinformatikerin und lebe in Münsters Innenstadt. Als Fraktionsvorsitzende der SPD im Rat und Ratskandidatin für die Innenstadt weiß ich: Veränderung beginnt vor Ort.</p>
+      <p>Gemeinsam können wir unsere Stadt noch lebenswerter machen. Ich engagiere mich leidenschaftlich für eine attraktivere Stadt für alle. In den letzten Jahren konnte ich viele Projekte umsetzen und anstoßen. Doch es gibt noch viel zu tun!</p>
+      <p>Ehrlichkeit, Verlässlichkeit und Humor sind für mich Grundvoraussetzungen für eine Politik, die das Leben der Menschen verbessert. Münster soll die lebenswerteste Stadt für alle Einkommensschichten sein.</p>
+      <p>Dafür habe ich unter anderem folgende Projekte angestoßen und umgesetzt:</p>
+      <ul>
+        <li>Das Jugend-Kulturticket (KULTICK)</li>
+        <li>Bezahlbare Mobilität durch das Münster-Ticket</li>
+        <li>Mehr bezahlbaren Wohnraum durch die Stärkung der Wohn+Stadtbau</li>
+      </ul>
+      <p>Die Innenstadt ist das Wohnzimmer unserer Stadt – lebendig, charmant und voller Begegnungsmöglichkeiten. Sie braucht mehr Aufenthaltsqualität, grünere Plätze und bezahlbaren Wohnraum.</p>
+      <p>Der Erhalt des Volkeningwohnheims, die Absicherung des F24 und ein autofreier, attraktiver Domplatz sind erste Schritte. All dies gelingt nur in guter Kommunikation mit Anwohnenden und der ansässigen Wirtschaft.</p>
+    </div>
 
-<h1 style="color: whitesmoke;" class="typA">.....<font face="Verdana">Meine Wahlkampftermine</font></h1>
+  </div>
 
-<div class="w3-content w3-display-container">
-  <img class="mySlides" src="Bildgerade.jpg" style="width:100%">
-  <img class="mySlides" src="Bildschraeg.jpg" style="width:100%">
-
-
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-
-function Themen(){
-        document.getElementById("Themen").innerHTML ="";
-    }
-    function SPDM(){
-        document.getElementById("SPDM").innerHTML ="";
-    }
-    function Termine(){
-        document.getElementById("Termine").innerHTML ="";
-    }
-    function Kontakt(){
-        document.getElementById("Kontakt").innerHTML ="";
-    }
-    function Impressum(){
-        document.getElementById("Impressum").innerHTML ="";
-    }
-    function Datenschutz(){
-        document.getElementById("Datenschutz").innerHTML ="";
-    }
-    function Facebook(){
-        document.getElementById("Facebook").innerHTML ="";
-    }
-    function Instagram(){
-        document.getElementById("Instagram").innerHTML ="";
-    }
-    function Startseite(){
-        document.getElementById("Startseite").innerHTML ="";
-    }
-     var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-</script>
-
-<div id="bereich">
-<h1 ><font face="Verdana">Über mich</font></h1>
-<h4><font face="Verdana">Mein Name ist Lia Kirsch. Ich bin 28 Jahre alt und Geoinformatikerin. Mit 16 Jahren bin ich in meiner Geburtsstadt Königswinter in die SPD eingetreten. Durch mein Studium ist Münster mein Zuhause geworden. Daher habe ich mir in Münster auch einen Job gesucht.
-Als junge politische Frau füllt mein Engagement für die SPD und die Jusos einen großen Teil meiner Freizeit aus. Neben der Politik bin ich aber auch gerne auf Flohmärkten und auf den Radwegen in und um Münster unterwegs.</font></h4>
-<h4><font face="Verdana">Schon früh habe ich mich für die Interessen junger Menschen eingesetzt. Neben meiner Vorstandsarbeit bei der SPD und den Jusos vor Ort, habe ich mich in viele jugendpolitische Debatten eingebracht und erfolgreich für eine neue Gesamtschule gestritten. Seit Mitte 2019 bin ich sachkundige Bürgerin im Planungsausschuss der Stadt Münster. Ich arbeite zu den Themen Stadtplanung und Stadtentwicklung, kommunale Verkehrs-, Wohnungs-, und Umweltpolitik.  Darüber hinaus bin ich Gewerkschaftsmitglied bei der Verdi, Mitglied beim BUND und dem Chaos Computer Club.
-</font></h4>
-</div>
-
-
-<footer style="background-color:  rgb(119,136,153);">
-    <p style="color: rgb(119,136,153);">.</p>
-    <p style="color: rgb(119,136,153);">.</p>
-    <button class="button button2 " onclick="Datenschutz()" style="float: right"> <a href="Datenschutz.html"><a href="Impressum.html" class="hbtno hb-fill-ono">Datenschutz</a></a></button>
-        <p id= "Datenschutz"></p>
-    <button class="button button2 " onclick="Facebook()" style="float: right">   <a target="_blank" href="https://www.facebook.com/Lia-Kirsch-110009677363813?view_public_for=110009677363813""><img src="fb.jpg" alt="Bild" width="30" height="auto" /></a> </button>
-    <p id= "Facebook"></p>
-    <button class="button button2 " onclick="Instagram()" style="float: right"> <a target="_blank" href="https://www.instagram.com/lia_kirsch/""><img src="instagram.jpg" alt="Bild" width="30" height="auto" /></a> </button>
-    <p id= "Instagram"></p>
-    <img src="in-die-neue-zeit.jpg" alt="Bild" width="200" height="auto" />
-    <p style="color: rgb(119,136,153);">.</p>
-    <p style="color:  rgb(119,136,153);">.</p>
-    <p style="color:  rgb(119,136,153);">.</p>
-</footer>
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/Lia-Kirsch-110009677363813" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/lia_kirsch/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Lia Kirsch</p>
+  </footer>
 </body>
+</html>
