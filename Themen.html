@@ -6,9 +6,7 @@
   <title>Lia Kirsch</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body, html {
       margin: 0;
       padding: 0;
@@ -18,26 +16,28 @@
     }
     header.hero {
       position: relative;
+      width: 100%;
       height: 90vh;
       overflow: hidden;
       z-index: 1;
     }
     .slideshow {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       overflow: hidden;
     }
     .slideshow img {
-      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      object-position: top center;
       object-fit: cover;
-      position: absolute;
+      object-position: center top; /* Kopf sichtbar halten */
+      display: none;
     }
     .slideshow img.active {
       display: block;
@@ -113,10 +113,6 @@
       color: #c8102e;
       text-align: center;
     }
-    .container h4 {
-      font-weight: 400;
-      line-height: 1.6;
-    }
     .topics {
       margin-top: 40px;
     }
@@ -160,8 +156,6 @@
       position: relative;
       z-index: 1;
     }
-
-    /* Mobile Optimierungen */
     @media (max-width: 768px) {
       .overlay {
         padding: 1rem 1.5rem;
@@ -178,7 +172,6 @@
         font-size: 1rem;
       }
     }
-
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -187,7 +180,6 @@
         margin: 8px 0;
       }
     }
-
     @media (max-width: 480px) {
       .container {
         padding: 30px 20px;
@@ -236,17 +228,17 @@
 
   <header class="hero">
     <div class="slideshow" onmouseover="stopSlideShow()" onmouseout="startSlideShow()">
-      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/kirsche.JPEG" alt="Slideshow Bild 1" loading="lazy">
-      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/F24.jpg" alt="Slideshow Bild 3" loading="lazy">
-      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/WS.jpeg" alt="Slideshow Bild 5" loading="lazy">
-      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/bus.JPG" alt="Slideshow Bild 7" loading="lazy">
-      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/demo.JPG" alt="Slideshow Bild 8" loading="lazy">
-      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/haushaltsrede.JPG" alt="Slideshow Bild 9" loading="lazy">
-            
+      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/kirsche.JPEG" alt="Slideshow Bild 1" class="active">
+      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/DSC_0009.JPG" alt="Slideshow Bild 2">
     </div>
     <div class="slideshow-controls">
-      <button onclick="prevSlide()" aria-label="Vorheriges Bild">&lt;</button>
-      <button onclick="nextSlide()" aria-label="Nächstes Bild">&gt;</button>
+      <button onclick="prevSlide()"><</button>
+      <button onclick="nextSlide()">></button>
+    </div>
+    <div class="overlay">
+      <h1>Lia Kirsch</h1>
+      <h3>Für ein gerechtes, lebendiges Münster</h3>
+      <h4>Fraktionsvorsitzende im Rat der Stadt Münster<br>und Ratskandidatin für die Innenstadt</h4>
     </div>
   </header>
   
@@ -265,8 +257,7 @@
     <div class="topics">
       <div class="topic">
         <h3>Bezahlbarer Wohnraum</h3>
-        <p>Wir brauchen mehr öffentlich geförderten Wohnungsbau und eine starke städtische Wohnungsbaugesellschaft. Nur so können wir langfristig bezahlbaren Wohnraum für alle sichern.</p>
-      </div>
+        <p>Wir brauchen mehr öffentlich geförderten Wohnungsbau und eine starke städtische Wohnungsbaugesellschaft. Nur so können wir langfristig bezahlbaren Wohnraum für alle sichern.</
       <div class="topic">
         <h3>Nachhaltige Mobilität</h3>
         <p>Ich setze mich ein für ein Münster-Ticket, das bezahlbaren ÖPNV für alle ermöglicht, sowie für sichere Fahrradwege und autofreie Plätze in der Innenstadt.</p>
