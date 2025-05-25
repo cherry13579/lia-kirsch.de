@@ -135,15 +135,6 @@
       margin: 10px 0 0 0;
       line-height: 1.6;
     }
-    .aktuelles {
-      margin-top: 40px;
-      text-align: center;
-    }
-    .aktuelles img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
     footer {
       background-color: #333;
       color: white;
@@ -162,12 +153,48 @@
     .social-icons a:hover {
       color: #c8102e;
     }
-       .transition-band {
+    .transition-band {
       height: 60px;
       background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #fff 100%);
       margin-top: -60px;
       position: relative;
       z-index: 1;
+    }
+
+    /* Mobile Optimierungen */
+    @media (max-width: 768px) {
+      .overlay {
+        padding: 1rem 1.5rem;
+        bottom: 10%;
+      }
+      .overlay h1 {
+        font-size: 1.8rem;
+      }
+      .overlay h3 {
+        font-size: 1.1rem;
+      }
+      .slideshow-controls button {
+        padding: 8px 14px;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 8px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+      .topic {
+        padding: 15px;
+      }
     }
   </style>
   <script>
@@ -209,12 +236,12 @@
 
   <header class="hero">
     <div class="slideshow" onmouseover="stopSlideShow()" onmouseout="startSlideShow()">
-      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/DSC_0009.JPG" alt="Slideshow Bild 1">
-      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/IMG_6348.jpeg" alt="Slideshow Bild 3">
+      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/DSC_0009.JPG" alt="Slideshow Bild 1" loading="lazy">
+      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/IMG_6348.jpeg" alt="Slideshow Bild 3" loading="lazy">
     </div>
     <div class="slideshow-controls">
-      <button onclick="prevSlide()"><</button>
-      <button onclick="nextSlide()">></button></button>
+      <button onclick="prevSlide()" aria-label="Vorheriges Bild">&lt;</button>
+      <button onclick="nextSlide()" aria-label="Nächstes Bild">&gt;</button>
     </div>
     <div class="overlay">
       <h1>Lia Kirsch</h1>
@@ -248,8 +275,6 @@
         <p>Mit dem KULTICK ermöglichen wir Jugendlichen den kostenfreien Zugang zu kulturellen Veranstaltungen und Einrichtungen. Das stärkt die Teilhabe und das Gemeinschaftsgefühl.</p>
       </div>
     </div>
-
-  
   </div>
 
   <footer>
