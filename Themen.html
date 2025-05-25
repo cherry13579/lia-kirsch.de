@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lia Kirsch</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
@@ -101,13 +100,14 @@
     }
     .container {
       max-width: 1000px;
-      margin: 40px auto;
+      margin: 0 auto;
+      padding: 60px 30px;
       background-color: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      color: #333;
       position: relative;
-      z-index: 3;
+      z-index: 2;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
     }
     .container h1 {
       color: #c8102e;
@@ -162,6 +162,13 @@
     .social-icons a:hover {
       color: #c8102e;
     }
+       .transition-band {
+      height: 60px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #fff 100%);
+      margin-top: -60px;
+      position: relative;
+      z-index: 1;
+    }
   </style>
   <script>
     let currentSlide = 0;
@@ -200,6 +207,23 @@
 </head>
 <body>
 
+  <header class="hero">
+    <div class="slideshow" onmouseover="stopSlideShow()" onmouseout="startSlideShow()">
+      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/DSC_0009.JPG" alt="Slideshow Bild 1">
+      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/IMG_6348.jpeg" alt="Slideshow Bild 3">
+    </div>
+    <div class="slideshow-controls">
+      <button onclick="prevSlide()"><</button>
+      <button onclick="nextSlide()">></button></button>
+    </div>
+    <div class="overlay">
+      <h1>Lia Kirsch</h1>
+      <h3>Fraktionsvorsitzende & Ratskandidatin für die Innenstadt</h3>
+    </div>
+  </header>
+  
+  <div class="transition-band"></div>
+
   <nav>
     <a href="index.html">Startseite</a>
     <a href="Themen.html">Themen</a>
@@ -207,21 +231,6 @@
     <a href="Impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
   </nav>
-
-  <header class="hero">
-    <div class="slideshow" onmouseover="stopSlideShow()" onmouseout="startSlideShow()">
-      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/DSC_0009.JPG" alt="Slideshow Bild 1">
-      <img src="https://raw.githubusercontent.com/cherry13579/lia-kirsch.de/master/IMG_6348.jpeg" alt="Slideshow Bild 3">
-    </div>
-    <div class="slideshow-controls">
-      <button onclick="prevSlide()">Zurück</button>
-      <button onclick="nextSlide()">Weiter</button>
-    </div>
-    <div class="overlay">
-      <h1>Lia Kirsch</h1>
-      <h3>Fraktionsvorsitzende & Ratskandidatin für die Innenstadt</h3>
-    </div>
-  </header>
 
   <div class="container">
     <h1>Themen</h1>
