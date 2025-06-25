@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lia Kirsch – Kalender</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lia Kirsch – Termine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body, html {
       margin: 0;
@@ -15,6 +14,7 @@
       background-color: #f5f5f5;
       color: #333;
     }
+
     nav {
       display: flex;
       justify-content: center;
@@ -26,6 +26,7 @@
       top: 0;
       z-index: 1000;
     }
+
     nav a {
       margin: 0 15px;
       text-decoration: none;
@@ -33,86 +34,93 @@
       font-weight: 600;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #c8102e;
     }
+
     .container {
-      max-width: 1000px;
+      max-width: 800px;
       margin: 40px auto;
       background-color: #fff;
       padding: 40px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-    .container h1 {
-      color: #c8102e;
       text-align: center;
-      margin-bottom: 40px;
     }
-    #calendar {
-      max-width: 900px;
-      margin: 0 auto;
+
+    h1 {
+      color: #c8102e;
+      margin-bottom: 20px;
     }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .flyer-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
     footer {
       background-color: #333;
       color: white;
       padding: 30px 20px;
       text-align: center;
     }
+
     .social-icons {
       margin-bottom: 15px;
     }
+
     .social-icons a {
       color: white;
       margin: 0 10px;
       font-size: 1.4rem;
       transition: color 0.3s;
     }
+
     .social-icons a:hover {
       color: #c8102e;
     }
   </style>
-  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const calendarEl = document.getElementById('calendar');
-      const calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        locale: 'de',
-        buttonText: {
-          today: 'Heute'
-        },
-        events: [],
-        eventClick: function(info) {
-          alert(info.event.title + "\n" + info.event.extendedProps.description);
-        }
-      });
-      calendar.render();
-    });
-  </script>
 </head>
 <body>
+
   <nav>
     <a href="index.html">Startseite</a>
     <a href="Themen.html">Themen</a>
-    <a href="Termine.html">Kalender</a>
+    <a href="Termine.html">Termine</a>
     <a href="Impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
   </nav>
 
   <div class="container">
-    <h1>Kalender</h1>
-    <div id="calendar"></div>
+    <h1>Triff mich im Wahlkreis!</h1>
+    <p>
+      Ich freue mich, dich beim <strong>Wahlkreispicknick</strong> zu treffen – alle Termine findest du auf dem Flyer unten.<br><br>
+      Darüber hinaus bin ich regelmäßig im Wahlkreis unterwegs, spreche mit Menschen vor Ort, höre zu und nehme Anregungen mit.
+    </p>
+    <p><strong>Sprich mich gerne an – ob beim Markt, beim Spaziergang oder unterwegs mit dem Rad!</strong></p>
+
+    <img src="PHOTO-2025-05-28-11-16-01 2.jpg" alt="Wahlkreispicknick Flyer" class="flyer-image" />
   </div>
 
   <footer>
     <div class="social-icons">
-      <a href="https://www.facebook.com/lia.kirsch.7" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/lia_kirsch/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:lia.kirsch@stadt-muenster.de" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.facebook.com/lia.kirsch.7" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/lia_kirsch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:lia.kirsch@stadt-muenster.de" target="_blank" aria-label="E-Mail"><i class="fas fa-envelope"></i></a>
     </div>
     <p><a href="datenschutz.html" style="color: #fff; text-decoration: underline;">Datenschutz</a></p>
     <p>&copy; 2025 Lia Kirsch</p>
   </footer>
+
 </body>
 </html>
